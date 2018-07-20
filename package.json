@@ -5,6 +5,10 @@
   "author": "Leslie Hoare <iam@lesleh.co.uk>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production"
+  },
   "babel": {
     "presets": [
       "env"
