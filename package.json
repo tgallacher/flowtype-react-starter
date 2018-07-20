@@ -1,0 +1,12 @@
+{
+  "name": "typescript-react-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Leslie Hoare <iam@lesleh.co.uk>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
