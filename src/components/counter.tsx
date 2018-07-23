@@ -17,23 +17,31 @@ export default class Counter extends Component<CounterProps, CounterState> {
     }
   }
 
+  decrementClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.decrement()
+  }
+
+  incrementClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
+    this.increment()
+  }
+
   decrement () {
-    this.setState((prevState, props) => {
+    this.setState((prevState, props) => ({
       currentValue: prevState.currentValue - 1
-    })
+    }))
   }
 
   increment () {
-    this.setState((prevState, props) => {
+    this.setState((prevState, props) => ({
       currentValue: prevState.currentValue + 1
-    })
+    }))
   }
 
   render () {
     return <React.Fragment>
-      <button>-</button>
+      <button onClick={this.decrementClicked}>-</button>
       {this.state.currentValue}
-      <button>+</button>
+      <button onClick={this.incrementClicked}>+</button>
     </React.Fragment>
   }
 
