@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import HelloWorld from './components/hello_world'
+import Counter from './components/counter'
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReactDOM.render(<HelloWorld name="Leslie"/>, document.querySelector('#the-app'))
+  ReactDOM.render(<Counter startAt={42}/>, document.querySelector('#the-app'))
 })
