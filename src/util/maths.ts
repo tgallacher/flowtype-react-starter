@@ -1,5 +1,5 @@
 // Type definitions are optional
-export function add (a, b) {
+export function add (a: any, b: any) {
   return a + b
 }
 
