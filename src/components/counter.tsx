@@ -26,13 +26,13 @@ export default class Counter extends Component<CounterProps, CounterState> {
   }
 
   decrement () {
-    this.setState((prevState, props) => ({
+    this.setState((prevState) => ({
       currentValue: prevState.currentValue - 1
     }))
   }
 
   increment () {
-    this.setState((prevState, props) => ({
+    this.setState((prevState) => ({
       currentValue: prevState.currentValue + 1
     }))
   }
