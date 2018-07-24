@@ -9,12 +9,8 @@ export interface CounterState {
 }
 
 export default class Counter extends Component<CounterProps, CounterState> {
-
-  constructor (props: CounterProps) {
-    super(props)
-    this.state = {
-      currentValue: this.props.startAt || 0
-    }
+  state = {
+    currentValue: this.props.startAt || 0
   }
 
   decrementClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
