@@ -1,5 +1,8 @@
-# Typescript React Starter
+# Flowtype React Starter
 
-1. `yarn install`
-2. `yarn webpack-dev-server`
+A basic example for illustration purposes to help aid the discussions of [FlowType](https://flow.org/) vs. [Typescript](https://www.typescriptlang.org/).
+
+## Run Dev live-reload
+1. `npm install`
+2. `npm run webpack-dev-server`
 3. http://localhost:8080/

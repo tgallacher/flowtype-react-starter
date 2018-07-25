@@ -9,7 +9,8 @@
     "build:dev": "webpack --mode development",
     "build:prod": "webpack --mode production",
     "flow:install-typed": "flow-typed install",
-    "flow": "flow status"
+    "flow": "flow status",
+    "webpack-dev-server": "webpack-dev-server --mode development"
   },
   "dependencies": {
     "react": "^16.4.1",
