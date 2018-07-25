@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+// @flow
+// Only files with '@flow' at the top will be analysed.
+import React, { Component, type MouseEvent } from 'react'
 
-export interface CounterProps {
+export type CounterProps = {
   startAt?: number
 }
 
-export interface CounterState {
+export type CounterState = {
   currentValue: number
 }
 
@@ -13,11 +15,11 @@ export default class Counter extends Component<CounterProps, CounterState> {
     currentValue: this.props.startAt || 0
   }
 
-  decrementClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
+  decrementClicked = (event: MouseEvent<HTMLButtonElement>) => {
     this.decrement()
   }
 
-  incrementClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
+  incrementClicked = (event: MouseEvent<HTMLButtonElement>) => {
     this.increment()
   }
 
@@ -34,11 +36,12 @@ export default class Counter extends Component<CounterProps, CounterState> {
   }
 
   render () {
-    return <React.Fragment>
-      <button onClick={this.decrementClicked}>-</button>
-      {this.state.currentValue}
-      <button onClick={this.incrementClicked}>+</button>
-    </React.Fragment>
+    return (
+      <React.Fragment>
+        <button onClick={this.decrementClicked}>-</button>
+        {this.state.currentValue}
+        <button onClick={this.incrementClicked}>+</button>
+      </React.Fragment>
+    )
   }
-
 }
