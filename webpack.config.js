@@ -1,22 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
 
 module.exports = {
   devtool: 'source-map',
-  entry: './src/index.tsx',
+  entry: './src/index.jsx',
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /\/node_modules\//,
+        include: path.join(__dirname, 'src'),
         loader: 'babel-loader'
-      },
-      {
-        test: /\.tsx?$/,
-        exclude: /\/node_modules\//,
-        loader: 'ts-loader'
       }
     ]
   },
